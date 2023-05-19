@@ -9,3 +9,8 @@
    - Rodar o comando `pip install django` e depois `django-admin startproject <nome da API>`
    - Entrar na pasta da API e dar o comando `django-admin startapp <nome do app>`
    - Na mesma pasta rode o comando `python manage.py runserver`
+   - Se tudo correr bem, isso estará no seu terminal:
+   ```bash
+   Starting development server at http://127.0.0.1:8000/
+   ```
+## Pronto, tudo pronto para começar a **Codar**
