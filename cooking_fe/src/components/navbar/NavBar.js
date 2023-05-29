@@ -49,51 +49,76 @@ const NavBar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <AppBar color="default" position="sticky" elevation={0}>
-      <StyleToolbar>
-        <Box flex={{ xs: 25, md: 1 }}>
-          <Typography variant="h4" color={"tomato"}>
-            Code Wizard Recipes
-          </Typography>
-        </Box>
-        <MenuBox flex={1} sx={{ display: { xs: "none", md: "flex" } }}>
-          {MenuItems.map((item) => (
-            <Typography variant="body2">{item.Name}</Typography>
-          ))}
-        </MenuBox>
-        <Box flex={1}>
+    <>
+      <AppBar color="default" position="sticky" elevation={0}>
+        <StyleToolbar>
+          <Box flex={{ xs: 25, md: 1 }}>
+            <Typography
+              variant="h4"
+              color={"tomato"}
+              sx={{ fontFamily: "Splash, cursive" }}
+            >
+              Code Wizard Recipes
+            </Typography>
+          </Box>
+          <MenuBox flex={1} sx={{ display: { xs: "none", md: "flex" } }}>
+            {MenuItems.map((item) => (
+              <Typography variant="body2">{item.Name}</Typography>
+            ))}
+          </MenuBox>
+          <Box flex={1}>
+            <TextField
+              sx={{ display: { xs: "none", md: "flex" } }}
+              color="warning"
+              label="Search"
+              variant="standard"
+            />
+            <MenuIcon
+              sx={{ display: { xs: "flex", md: "none" }, cursor: "pointer" }}
+              onClick={() => setOpenMenu(!openMenu)}
+            />
+          </Box>
+        </StyleToolbar>
+        <Drawer
+          anchor={"top"}
+          open={openMenu}
+          onClose={() => setOpenMenu(!openMenu)}
+        >
+          <List>
+            <ListItem>
+              {MenuItems.map((item) => (
+                <ListItemButton>{item.Name}</ListItemButton>
+              ))}
+            </ListItem>
+          </List>
           <TextField
-            sx={{ display: { xs: "none", md: "flex" } }}
+            sx={{ display: { xs: "flex", md: "none" } }}
             color="warning"
             label="Search"
-            variant="standard"
+            variant="outlined"
           />
-          <MenuIcon
-            sx={{ display: { xs: "flex", md: "none" }, cursor: "pointer" }}
-            onClick={() => setOpenMenu(!openMenu)}
-          />
-        </Box>
-      </StyleToolbar>
-      <Drawer
-        anchor={"top"}
-        open={openMenu}
-        onClose={() => setOpenMenu(!openMenu)}
+        </Drawer>
+      </AppBar>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: { xs: "column", md: "row" },
+        }}
       >
-        <List>
-          <ListItem>
-            {MenuItems.map((item) => (
-              <ListItemButton>{item.Name}</ListItemButton>
-            ))}
-          </ListItem>
-        </List>
-        <TextField
-          sx={{ display: { xs: "flex", md: "none" } }}
-          color="warning"
-          label="Search"
-          variant="outlined"
-        />
-      </Drawer>
-    </AppBar>
+        <Typography align="center" variant="h5" mr={{ xs: 0, md: 1 }}>
+          Simple recipes made by a Coder!
+        </Typography>
+        <Typography
+          align="center"
+          variant="h5"
+          color={"tomato"}
+          sx={{ fontFamily: "Splash, cursive" }}
+        >
+          Real Recipes, Real Codes.
+        </Typography>
+      </Box>
+    </>
   );
 };
 
