@@ -56,7 +56,10 @@ const NavBar = () => {
             <Typography
               variant="h4"
               color={"tomato"}
-              sx={{ fontFamily: "Splash, cursive" }}
+              sx={{
+                fontFamily: "Splash, cursive",
+                textAlign: { xs: "center", md: "left" },
+              }}
             >
               Code Wizard Recipes
             </Typography>
@@ -104,6 +107,7 @@ const NavBar = () => {
           display: "flex",
           justifyContent: "center",
           flexDirection: { xs: "column", md: "row" },
+          padding: 1
         }}
       >
         <Typography align="center" variant="h5" mr={{ xs: 0, md: 1 }}>

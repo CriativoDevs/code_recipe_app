@@ -3,6 +3,7 @@ import drinks from "../../static/drinks.jpg";
 import meat from "../../static/meat.jpg";
 import burger from "../../static/burger1.jpg";
 import appetizer from "../../static/appetizer.jpg";
+import Category from "../categoryList/Category";
 
 const Hero = () => {
   const StyledCard = styled(Box)(({ theme }) => ({
@@ -85,6 +86,7 @@ const Hero = () => {
           </StyledCard>
         </Grid>
       </Grid>
+      <Category />
     </Container>
   );
 };
