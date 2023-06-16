@@ -107,7 +107,7 @@ const NavBar = () => {
           display: "flex",
           justifyContent: "center",
           flexDirection: { xs: "column", md: "row" },
-          padding: 1
+          padding: 1,
         }}
       >
         <Typography align="center" variant="h5" mr={{ xs: 0, md: 1 }}>
