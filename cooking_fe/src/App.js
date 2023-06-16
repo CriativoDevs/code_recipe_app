@@ -1,14 +1,19 @@
+import DetailsPage from "./components/detailsPage/DetailsPage";
 import Footer from "./components/footer/Footer";
-import Hero from "./components/hero/Hero";
 import Main from "./components/main/Main";
 import NavBar from "./components/navbar/NavBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <NavBar />
-      <Hero />
-      <Main />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/details" element={<DetailsPage />} />
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </>
   );
