@@ -1,1 +1,12 @@
 Aqui é para quando eu for fazer a revisão do projeto e colocar o passo a passo da ordem a ser seguida.
+
+BE:
+1 - criar um virtual env
+2 - ativar o venv
+3 - instalar as libs que serão precisas para o projeto, nesse caso, Django, DRF, Pillow, Django Cors
+4 - Iniciar o projeto
+5 - Criar o app
+6 - incluir o DRF e Django Cors no Installed Apps
+7 - Em settings file, colocar media, cors e afins (olhar no final do doc.)
+8 - urls.py do projeto
+9 - no app, criar o urls e serializers .py
