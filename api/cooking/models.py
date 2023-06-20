@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models import CASCADE
 
 # Create your models here.
 class Category(models.Model):
@@ -14,7 +13,7 @@ class Blog(models.Model):
 	POST_CHOICES = [
 		('POPULAR', 'popular')
 	]
-	category = models.ForeignKey(Category, on_delete=CASCADE, null=True)
+	category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
 	title = models.CharField(max_length=255)
 	slug = models.SlugField(max_length=255)
 	excerpt = models.CharField(max_length=255, default='')

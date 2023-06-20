@@ -10,3 +10,4 @@ BE:
 7 - Em settings file, colocar media, cors e afins (olhar no final do doc.)
 8 - urls.py do projeto
 9 - no app, criar o urls e serializers .py
+10 - Registar os models no admin.
