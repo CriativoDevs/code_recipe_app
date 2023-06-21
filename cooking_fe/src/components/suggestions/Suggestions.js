@@ -1,9 +1,28 @@
 import { Box, Stack, Typography, styled } from "@mui/material";
-import drinks from "../../static/drinks.jpg";
-import dessert from "../../static/dessert.jpg";
-import dinner from "../../static/dinner.jpg";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Suggestions = () => {
+
+  const [category, setCategory] = useState([]);
+
+  useEffect(() => {
+      // A const abaixo pode ter qualquer nome
+      const fetchData = async () => {
+          try {
+              const res = await axios.get(
+                  "http://127.0.0.1:8000/api/category/"
+              );
+              // Abaixo é feito atribuído as informações que é recebido do BE.
+              setCategory(res.data);
+          } catch (error) {
+              console.log(error);
+          }
+      };
+      // Toda vez que o category for aberto, a função abaixo será chamada.
+      fetchData();
+  }, []);
+  
   const StyledCard = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "center",
@@ -40,29 +59,23 @@ const Suggestions = () => {
     flexDirection: "column",
   });
   return (
-    <Stack
-      Container
-      direction={"row"}
-      justifyContent={"center"}
-      alignItems={"center"}
-      mt={4}
-      spacing={3}
-      ml={3}
-      sx={{ overflow: "auto" }}
-    >
-      <CardBox>
-        <StyledCard sx={{ backgroundImage: `url(${drinks})}` }} />
-        <StyledTypography>Drinks</StyledTypography>
-      </CardBox>
-      <CardBox>
-        <StyledCard sx={{ backgroundImage: `url(${dessert})}` }} />
-        <StyledTypography>Dessert</StyledTypography>
-      </CardBox>
-      <CardBox>
-        <StyledCard sx={{ backgroundImage: `url(${dinner})}` }} />
-        <StyledTypography>Dinner</StyledTypography>
-      </CardBox>
-    </Stack>
+      <Stack
+          Container
+          direction={"row"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          mt={4}
+          spacing={3}
+          ml={3}
+          sx={{ overflow: "auto" }}
+      >
+          {category.map((cat) => (
+              <CardBox>
+                  <StyledCard sx={{ backgroundImage: `url(${cat.image})}` }} />
+                  <StyledTypography>{cat.name}</StyledTypography>
+              </CardBox>
+          ))}
+      </Stack>
   );
 };
 
