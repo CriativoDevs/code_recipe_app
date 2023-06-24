@@ -11,7 +11,7 @@ const Suggestions = () => {
       const fetchData = async () => {
           try {
               const res = await axios.get(
-                  "http://127.0.0.1:8000/api/category/"
+                  `${process.env.REACT_APP_API_URL}/api/category/`
               );
               // Abaixo é feito atribuído as informações que é recebido do BE.
               setCategory(res.data);
@@ -22,7 +22,7 @@ const Suggestions = () => {
       // Toda vez que o category for aberto, a função abaixo será chamada.
       fetchData();
   }, []);
-  
+
   const StyledCard = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "center",

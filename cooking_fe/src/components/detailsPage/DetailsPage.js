@@ -27,7 +27,7 @@ const DetailsPage = () => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(
-                    `http://127.0.0.1:8000/api/blog/${slug}`
+                    `${process.env.REACT_APP_API_URL}/api/blog/${slug}`
                 );
                 // Abaixo é feito atribuído as informações que é recebido do BE.
                 setBlogDetails(res.data);

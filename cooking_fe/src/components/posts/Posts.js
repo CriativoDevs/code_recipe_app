@@ -10,7 +10,9 @@ const Posts = () => {
         // A const abaixo pode ter qualquer nome
         const fetchData = async () => {
             try {
-                const res = await axios.get("http://127.0.0.1:8000/api/blog/");
+                const res = await axios.get(
+                    `${process.env.REACT_APP_API_URL}/api/blog/`
+                );
                 // Abaixo é feito atribuído as informações que é recebido do BE.
                 setBlog(res.data);
             } catch (error) {
@@ -28,7 +30,7 @@ const Posts = () => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(
-                    "http://127.0.0.1:8000/api/PopularPostApiView/"
+                    `${process.env.REACT_APP_API_URL}/api/PopularPostApiView/`
                 );
                 // Abaixo é feito atribuído as informações que é recebido do BE.
                 setPost(res.data);
@@ -82,7 +84,7 @@ const Posts = () => {
                         <PostsCard
                             title={pop.title}
                             excerpt={pop.excerpt}
-                            image={`http://127.0.0.1:8000/${pop.image}`}
+                            image={`${process.env.REACT_APP_API_URL}/${pop.image}`}
                             myDirection={"block"}
                         />
                     </Grid>
