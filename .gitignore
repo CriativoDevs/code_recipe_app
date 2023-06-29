@@ -196,13 +196,6 @@ cython_debug/
 #.idea/
 
 ### Images ###
-# JPEG
-*.jpg
-*.jpeg
-*.jpe
-*.jif
-*.jfif
-*.jfi
 
 # JPEG 2000
 *.jp2
@@ -226,9 +219,6 @@ cython_debug/
 # Web P
 *.webp
 
-# Portable Network Graphics
-*.png
-
 # Animated Portable Network Graphics
 *.apng
 
@@ -238,13 +228,6 @@ cython_debug/
 # Tagged Image File Format
 *.tiff
 *.tif
-
-# Scalable Vector Graphics
-*.svg
-*.svgz
-
-# Portable Document Format
-*.pdf
 
 # X BitMap
 *.xbm
