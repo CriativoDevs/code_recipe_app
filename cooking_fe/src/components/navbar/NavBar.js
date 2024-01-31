@@ -67,7 +67,7 @@ const NavBar = () => {
                                     textAlign: { xs: "center", md: "left" },
                                 }}
                             >
-                                Code Wizard Recipes
+                                Criatvo Devs Recipes
                             </Typography>
                         </Link>
                     </Box>

@@ -38,7 +38,7 @@ const Footer = () => {
             ))}
           </MenuBox>
           <Box flex={1} color={"white"} mt={1}>
-            ©2023 Code Wizard.
+            ©2023 Criativo Devs.
           </Box>
         </Stack>
         <Typography variant="h4" align="center" mt={8} color={"white"}>
