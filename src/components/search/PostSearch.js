@@ -64,8 +64,7 @@ const PostSearch = () => {
                         variant="standard"
                         onChange={(e) => setLookup(e.target.value)}
                     />
-                    {postSearch
-                        .filter((search) =>
+                    {postSearch.filter((search) =>
                             search.title.toLowerCase().includes(lookup)
                         )
                         .map((search) => (
