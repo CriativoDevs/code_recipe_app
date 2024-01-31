@@ -13,7 +13,7 @@ const CatBasedPost = () => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(
-                    `${process.env.REACT_APP_API_URL}/api/categoryBaseBlogs/${id}`
+                    `${process.env.REACT_APP_API_URL}/api/categoryBaseBlogs/${id}/`
                 );
                 // Abaixo é feito atribuído as informações que é recebido do BE.
                 setBlog(res.data);
@@ -41,7 +41,7 @@ const CatBasedPost = () => {
                         <PostsCard
                             title={post.title}
                             excerpt={post.excerpt}
-                            image={`${process.env.REACT_APP_API_URL}/${post.image}`}
+                            image={`${process.env.REACT_APP_API_URL}/${post.image}/`}
                             blogHref={`/details/${post.slug}`}
                             myDirection={"flex"}
                         />

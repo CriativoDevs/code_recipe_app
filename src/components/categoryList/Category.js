@@ -11,7 +11,7 @@ const Category = () => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(
-                    "https://code-recipe-app.vercel.app/api/category/"
+                  `${process.env.REACT_APP_API_URL}/api/category/`
                 );
                 // Abaixo é feito atribuído as informações que é recebido do BE.
                 setCategory(res.data);

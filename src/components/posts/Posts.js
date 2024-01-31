@@ -84,7 +84,7 @@ const Posts = () => {
                         <PostsCard
                             title={pop.title}
                             excerpt={pop.excerpt}
-                            image={`${process.env.REACT_APP_API_URL}/${pop.image}`}
+                            image={`${process.env.REACT_APP_API_URL}/${pop.image}/`}
                             myDirection={"block"}
                         />
                     </Grid>
