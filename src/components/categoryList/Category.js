@@ -13,6 +13,7 @@ const Category = () => {
                 const res = await axios.get(
                   `${process.env.REACT_APP_API_URL}/api/category/`
                 );
+                console.log("RES", res)
                 // Abaixo é feito atribuído as informações que é recebido do BE.
                 setCategory(res.data);
             } catch (error) {

@@ -66,8 +66,7 @@ const PostSearch = () => {
                     />
                     {postSearch.filter((search) =>
                             search.title.toLowerCase().includes(lookup)
-                        )
-                        .map((search) => (
+                        ).map((search) => (
                             lookup.length > 0 ?
                             <Grid item xs>
                                 <PostsCard
