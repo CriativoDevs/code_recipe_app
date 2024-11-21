@@ -11,7 +11,8 @@ const Posts = () => {
     const fetchData = async () => {
       try {
         const API_URL =
-          process.env.REACT_APP_API_URL || "http://localhost:8000/api";
+          process.env.REACT_APP_API_URL ||
+          "https://criativodevs.pythonanywhere.com/api";
         const res = await axios.get(`${API_URL}/blog/`);
 
         // Abaixo é feito atribuído as informações que é recebido do BE.
@@ -31,7 +32,8 @@ const Posts = () => {
     const fetchData = async () => {
       try {
         const API_URL =
-          process.env.REACT_APP_API_URL || "http://localhost:8000/api";
+          process.env.REACT_APP_API_URL ||
+          "https://criativodevs.pythonanywhere.com//api";
         const res = await axios.get(`${API_URL}/PopularPostApiView/`);
         // Abaixo é feito atribuído as informações que é recebido do BE.
         setPost(res.data);
@@ -98,7 +100,7 @@ const Posts = () => {
               excerpt={pop.excerpt}
               image={
                 pop.image
-                  ? `http://localhost:8000${pop.image}`
+                  ? `https://criativodevs.pythonanywhere.com/${pop.image}`
                   : "/placeholder.png"
               }
               myDirection={"block"}

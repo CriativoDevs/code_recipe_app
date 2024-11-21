@@ -12,7 +12,11 @@ import SendIcon from "@mui/icons-material/Send";
 const Rightbar = () => {
   return (
     <Box sx={{ padding: 2 }}>
-      <Typography variant="h5" align="center" mt={5}>
+      <Typography
+        variant="h5"
+        align="center"
+        mt={5}
+      >
         Hey I'm The Chef
       </Typography>
       <CardMedia
@@ -31,13 +35,19 @@ const Rightbar = () => {
           },
         }}
       />
-      <Typography align="left" variant="body1">
+      <Typography
+        align="left"
+        variant="body1"
+      >
         I love make code as much I love make food!!
       </Typography>
-      <Typography align="left" variant="body1">
+      <Typography
+        align="left"
+        variant="body1"
+      >
         Don't forget to visit my portfolio <br />{" "}
         <a
-          href="https://code-wizard-site-production.up.railway.app/"
+          href="https://criativodevs.online"
           target="_blank"
           rel="noreferrer"
         >
@@ -45,11 +55,19 @@ const Rightbar = () => {
         </a>
       </Typography>
       <Card sx={{ height: "200px", marginTop: 2 }}>
-        <Typography align="center" variant="body1">
+        <Typography
+          align="center"
+          variant="body1"
+        >
           Ads here
         </Typography>
       </Card>
-      <Typography mt={2} align="center" color={"white"} bgcolor={"tomato"}>
+      <Typography
+        mt={2}
+        align="center"
+        color={"white"}
+        bgcolor={"tomato"}
+      >
         Subscribe Via Email
       </Typography>
       <Box sx={{ pl: 10 }}>
@@ -63,12 +81,18 @@ const Rightbar = () => {
         </IconButton>
       </Box>
       <Card sx={{ height: "200px", marginTop: 2 }}>
-        <Typography align="center" variant="body1">
+        <Typography
+          align="center"
+          variant="body1"
+        >
           Ads here
         </Typography>
       </Card>
       <Card sx={{ height: "200px", marginTop: 2 }}>
-        <Typography align="center" variant="body1">
+        <Typography
+          align="center"
+          variant="body1"
+        >
           Ads here
         </Typography>
       </Card>

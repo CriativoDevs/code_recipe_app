@@ -27,7 +27,8 @@ const DetailsPage = () => {
         const fetchData = async () => {
             try {
                 const API_URL =
-                  process.env.REACT_APP_API_URL || "http://localhost:8000/api";
+                  process.env.REACT_APP_API_URL ||
+                  "https://criativodevs.pythonanywhere.com/api";
                 const res = await axios.get(`${API_URL}/blog/${slug}/`);
                 // Abaixo é feito atribuído as informações que é recebido do BE.
                 setBlogDetails(res.data);

@@ -13,7 +13,8 @@ const CatBasedPost = () => {
     const fetchData = async () => {
       try {
         const API_URL =
-          process.env.REACT_APP_API_URL || "http://localhost:8000/api";
+          process.env.REACT_APP_API_URL ||
+          "https://criativodevs.pythonanywhere.com/api";
         const res = await axios.get(`${API_URL}/categoryBaseBlogs/${id}/`);
         // Abaixo é feito atribuído as informações que é recebido do BE.
         setBlog(res.data);
