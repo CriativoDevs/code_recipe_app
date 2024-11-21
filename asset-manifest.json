@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/code_recipe_app/static/js/main.c063e2b2.js",
+    "main.js": "/code_recipe_app/static/js/main.519627dd.js",
     "static/media/chef.jpg": "/code_recipe_app/static/media/chef.9cc822367a19f1c5d45d.jpg",
     "static/media/burger1.jpg": "/code_recipe_app/static/media/burger1.b314fad18dceb1eab147.jpg",
     "static/media/drinks.jpg": "/code_recipe_app/static/media/drinks.caa211c4f1b54a3b98d6.jpg",
     "static/media/appetizer.jpg": "/code_recipe_app/static/media/appetizer.9f31df9611c633b7608b.jpg",
     "static/media/meat.jpg": "/code_recipe_app/static/media/meat.19f9601af1bb1df38613.jpg",
     "index.html": "/code_recipe_app/index.html",
-    "main.c063e2b2.js.map": "/code_recipe_app/static/js/main.c063e2b2.js.map"
+    "main.519627dd.js.map": "/code_recipe_app/static/js/main.519627dd.js.map"
   },
   "entrypoints": [
-    "static/js/main.c063e2b2.js"
+    "static/js/main.519627dd.js"
   ]
 }
