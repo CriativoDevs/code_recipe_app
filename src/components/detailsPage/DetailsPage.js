@@ -26,9 +26,9 @@ const DetailsPage = () => {
         // A const abaixo pode ter qualquer nome
         const fetchData = async () => {
             try {
-                const res = await axios.get(
-                    `${process.env.REACT_APP_API_URL}/api/blog/${slug}/`
-                );
+                const API_URL =
+                  process.env.REACT_APP_API_URL || "http://localhost:8000/api";
+                const res = await axios.get(`${API_URL}/blog/${slug}/`);
                 // Abaixo é feito atribuído as informações que é recebido do BE.
                 setBlogDetails(res.data);
                 setPostIngredients(res.data.ingredients);
