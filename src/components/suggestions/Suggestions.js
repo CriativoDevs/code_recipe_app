@@ -11,7 +11,7 @@ const Suggestions = () => {
       try {
         const API_URL =
           process.env.REACT_APP_API_URL ||
-          "https://criativodevs.pythonanywhere.com/api";
+          "https://criativodevs.pythonanywhere.com/code_recipe_app/api";
         const res = await axios.get(`${API_URL}/category/`);
         // Abaixo é feito atribuído as informações que é recebido do BE.
         setCategory(res.data);

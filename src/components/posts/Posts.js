@@ -12,7 +12,7 @@ const Posts = () => {
       try {
         const API_URL =
           process.env.REACT_APP_API_URL ||
-          "https://criativodevs.pythonanywhere.com/api";
+          "https://criativodevs.pythonanywhere.com/code_recipe_app/api";
         const res = await axios.get(`${API_URL}/blog/`);
 
         // Abaixo é feito atribuído as informações que é recebido do BE.
@@ -33,7 +33,7 @@ const Posts = () => {
       try {
         const API_URL =
           process.env.REACT_APP_API_URL ||
-          "https://criativodevs.pythonanywhere.com/api";
+          "https://criativodevs.pythonanywhere.com/code_recipe_app/api";
         const res = await axios.get(`${API_URL}/PopularPostApiView/`);
         // Abaixo é feito atribuído as informações que é recebido do BE.
         setPost(res.data);
@@ -100,7 +100,7 @@ const Posts = () => {
               excerpt={pop.excerpt}
               image={
                 pop.image
-                  ? `https://criativodevs.pythonanywhere.com${pop.image}`
+                  ? `https://criativodevs.pythonanywhere.com/code_recipe_app${pop.image}`
                   : "/placeholder.png"
               }
               myDirection={"block"}
